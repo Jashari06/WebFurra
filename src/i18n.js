@@ -1,19 +1,140 @@
 /* =========================================================
    Übersetzungen · Translations · Vertalingen · Përkthime
    ---------------------------------------------------------
-   Deutsch (de) ist der Text direkt in index.html und die
-   Startsprache. Hier stehen nur die Texte, die JavaScript
-   selbst erzeugt, plus die drei weiteren Sprachen.
-   Fehlt ein Schlüssel, bleibt der deutsche Text stehen.
+   Deutsch (de) ist die Startsprache. Fehlt in einer anderen
+   Sprache ein Schlüssel, wird der deutsche Text verwendet.
+   Werte mit <br>, <em>, <b>, <small> werden als HTML gerendert.
    ========================================================= */
-window.I18N = {
-  /* ---------------- Deutsch (nur dynamische Texte) ---------------- */
+export const LANGS = ["de", "en", "nl", "sq"];
+
+export const I18N = {
+  /* ---------------- Deutsch ---------------- */
   de: {
     label: "Deutsch",
     "meta.title": "Balkan Bäckerei & Grill · Bad Neuenahr-Ahrweiler",
     "meta.desc": "Burek frisch aus dem Ofen, Ćevapi vom Holzkohlegrill, Baklava und Bosnischer Kaffee – Balkan Bäckerei & Grill in Bad Neuenahr-Ahrweiler.",
+    skip: "Zum Inhalt springen",
+    "aria.home": "Balkan Bäckerei & Grill – Startseite",
+    "aria.nav": "Hauptnavigation",
+    "aria.lang": "Sprache wählen",
+    "aria.scroll": "Weiter nach unten",
+    "aria.tabs": "Kategorien der Speisekarte",
+    "aria.footer": "Fußzeile",
     "aria.menuOpen": "Menü öffnen",
     "aria.menuClose": "Menü schließen",
+
+    "nav.tradition": "Tradition",
+    "nav.menu": "Speisekarte",
+    "nav.grill": "Grill",
+    "nav.gallery": "Galerie",
+    "nav.visit": "Besuch",
+    "nav.route": "Route planen",
+
+    "hero.title1": "Frisch aus dem Ofen.",
+    "hero.title2": "Heiß vom Grill.",
+    "hero.lead": "Knuspriger Burek, saftige Ćevapi und Baklava nach Familienrezept – die Backstube und der Grill des Balkans, mitten im Ahrtal.",
+    "hero.cta1": "Speisekarte ansehen",
+    "hero.cta2": "So finden Sie uns",
+
+    pillar1: "<b>Täglich frisch</b>aus dem Ofen",
+    pillar2: "<b>Holzkohlegrill</b>mit echter Glut",
+    pillar3: "<b>Rezepte</b>aus der Heimat",
+
+    "trad.kicker": "Unsere Tradition",
+    "trad.title": "Ein Stück Heimat in jedem Bissen",
+    "trad.p1": "Auf dem Balkan beginnt der Tag beim Bäcker. Der Duft von frischem Burek zieht durch die Gassen, auf dem Tresen dampft ein Kännchen Kaffee, und mittags glüht die Holzkohle für Ćevapi und Pljeskavica.",
+    "trad.p2": "Genau dieses Gefühl bringen wir nach Bad Neuenahr-Ahrweiler: Teig, der von Hand gezogen wird, bis er hauchdünn ist. Fleisch, das nach überlieferter Art gewürzt wird. Und Gastfreundschaft, die man schmeckt.",
+    "trad.l1": "Teig von Hand gezogen, Schicht für Schicht",
+    "trad.l2": "Gewürzt nach überlieferten Rezepten",
+    "trad.l3": "Über echter Holzkohle gegrillt",
+    seal: "· HANDGEMACHT · FRISCH GEBACKEN · VOM GRILL ",
+
+    "menu.kicker": "Speisekarte",
+    "menu.title": "Burek, Ćevapi und Baklava – unsere Karte",
+    "menu.intro": "Eine Auswahl unserer Klassiker. Fragen Sie im Laden nach den Spezialitäten des Tages.",
+    "tab.oven": "Aus dem Ofen",
+    "tab.grill": "Vom Grill",
+    "tab.sweet": "Süßes",
+    "tab.drinks": "Getränke",
+
+    "d.burek": "Burek mit Fleisch",
+    "d.burek.p": "Hauchdünner Teig, gefüllt mit würzigem Hackfleisch und Zwiebeln – der Klassiker.",
+    "d.sirnica": "Sirnica <small>mit Käse</small>",
+    "d.sirnica.p": "Mit frischem Weißkäse gefüllt, außen knusprig, innen cremig.",
+    "d.zeljanica": "Zeljanica <small>mit Spinat</small>",
+    "d.zeljanica.p": "Spinat und Käse im goldbraunen Blätterteig.",
+    "d.krompirusa": "Krompiruša <small>mit Kartoffeln</small>",
+    "d.krompirusa.p": "Herzhaft gewürzte Kartoffelfüllung – auch vegetarisch ein Genuss.",
+    "d.lepinja": "Lepinja &amp; Somun",
+    "d.lepinja.p": "Weiches Fladenbrot, frisch aus dem Ofen – perfekt zu allem vom Grill.",
+    "d.pogaca": "Pogača &amp; Kifle",
+    "d.pogaca.p": "Fluffiges Hefegebäck und kleine Hörnchen für Frühstück und Kaffee.",
+    "d.cevapi": "Ćevapi",
+    "d.cevapi.p": "Kleine Hackfleischröllchen vom Holzkohlegrill, im Lepinja mit Zwiebeln, Ajvar und Kajmak.",
+    "d.pljeskavica": "Pljeskavica",
+    "d.pljeskavica.p": "Der große Balkan-Burger – saftig, würzig, im warmen Fladenbrot.",
+    "d.filled": "Gefüllte Pljeskavica",
+    "d.filled.p": "Mit geschmolzenem Käse im Inneren. Für den großen Hunger.",
+    "d.sudzuk": "Sudžuk",
+    "d.sudzuk.p": "Kräftige, luftgetrocknete Rindswurst, kross gegrillt.",
+    "d.chicken": "Hähnchenspieße",
+    "d.chicken.p": "Mariniertes Hähnchen, über Glut gegrillt, mit Salat und Brot.",
+    "d.platter": "Balkan-Grillteller",
+    "d.platter.p": "Ein bisschen von allem: Ćevapi, Pljeskavica, Sudžuk, Pommes und Salat.",
+    "d.baklava": "Baklava",
+    "d.baklava.p": "Feine Teigblätter, Walnüsse oder Pistazien und goldener Sirup.",
+    "d.tulumbe": "Tulumbe",
+    "d.tulumbe.p": "Knusprig frittiertes Spritzgebäck, in Sirup getränkt.",
+    "d.kadaif": "Kadaif",
+    "d.kadaif.p": "Feine Teigfäden mit Nussfüllung, süß und knusprig.",
+    "d.tufahija": "Tufahija",
+    "d.tufahija.p": "Pochierter Apfel mit Walnussfüllung und Sahnehaube.",
+    "d.coffee": "Bosnischer Kaffee",
+    "d.coffee.p": "Im Džezva aufgekocht, serviert mit Zuckerwürfel und Rahat Lokum.",
+    "d.yogurt": "Jogurt &amp; Ayran",
+    "d.yogurt.p": "Kühl und erfrischend – der perfekte Begleiter zum Burek.",
+    "d.tea": "Schwarzer Tee",
+    "d.tea.p": "Heiß im Glas, wie man ihn kennt.",
+    "d.soft": "Softdrinks &amp; Wasser",
+    "d.soft.p": "Gut gekühlt, für unterwegs oder vor Ort.",
+
+    "grill.kicker": "Vom Holzkohlegrill",
+    "grill.title": "Zehn Ćevapi, ein warmes Lepinja und eine Handvoll Zwiebeln.",
+    "grill.p": "So schmeckt ein Sommerabend in Sarajevo, Belgrad oder Prishtina – und jetzt auch im Ahrtal. Unsere Ćevapi werden über echter Glut gegrillt, bis sie außen kross und innen saftig sind. Dazu Ajvar aus gerösteter Paprika und cremiger Kajmak.",
+    "grill.onions": "Zwiebeln",
+    "grill.cta": "Zum Grill-Menü",
+
+    "gal.kicker": "Galerie",
+    "gal.title": "Backstube und Grill in Bildern",
+    "gal.hint": "Zum Blättern ziehen oder seitlich wischen",
+    "gal.c1": "Vom Grill",
+    "gal.c2": "Frisch gebacken",
+    "gal.c5": "Brot",
+
+    "visit.kicker": "Besuchen Sie uns",
+    "visit.title": "Unsere Bäckerei im Ahrtal.<br><em>Kommen Sie hungrig.</em>",
+    "visit.address": "Adresse",
+    "visit.phone": "Telefon",
+    "visit.hours": "Öffnungszeiten",
+    "visit.call": "Jetzt anrufen",
+    "map.q": "Karte von Google Maps laden?",
+    "map.note": "Beim Laden werden Daten an Google übertragen.",
+    "map.btn": "Karte anzeigen",
+
+    "footer.tag": "Frisch aus dem Ofen. Heiß vom Grill.<br>Bad Neuenahr-Ahrweiler",
+    "footer.imprint": "Impressum",
+    "footer.privacy": "Datenschutz",
+    "footer.photos": "Fotos: Unsplash",
+
+    "alt.dough": "Hände kneten Teig auf einer bemehlten Holzplatte",
+    "alt.oven": "Brot im glühenden Steinofen",
+    "alt.flour": "Mehl wird über den Arbeitstisch gestreut",
+    "alt.pastry": "Goldbraune Blätterteig-Gebäcke in der Auslage",
+    "alt.cevapi": "Gegrillte Ćevapi mit roter Paprikasoße",
+    "alt.baklava": "Goldene Baklava mit gehackten Pistazien",
+    "alt.coffee": "Bosnischer Kaffee wird aus einer traditionellen Kanne eingeschenkt",
+    "alt.bakery": "Blick in eine Bäckerei mit Gebäck in der Theke",
+
     days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
     timeRange: "{a} – {b} Uhr",
     closedDay: "Ruhetag",
@@ -48,7 +169,9 @@ window.I18N = {
     "nav.visit": "Visit",
     "nav.route": "Get directions",
 
-    "hero.title": "Fresh from the oven.<br><em>Hot off the grill.</em>",
+    "hero.title1": "Fresh from the oven.",
+    "hero.title2": "Hot off the grill.",
+    "gal.hint": "Drag or swipe sideways to browse",
     "hero.lead": "Flaky burek, juicy ćevapi and baklava made from family recipes – the bakery and grill of the Balkans, right in the heart of the Ahr Valley.",
     "hero.cta1": "View the menu",
     "hero.cta2": "How to find us",
@@ -67,7 +190,7 @@ window.I18N = {
     seal: "· HANDMADE · FRESHLY BAKED · OFF THE GRILL ",
 
     "menu.kicker": "Menu",
-    "menu.title": "What’s on the counter today",
+    "menu.title": "Burek, ćevapi and baklava: our menu",
     "menu.intro": "A selection of our classics. Ask in store about today’s specials.",
     "tab.oven": "From the oven",
     "tab.grill": "From the grill",
@@ -122,13 +245,13 @@ window.I18N = {
     "grill.cta": "See the grill menu",
 
     "gal.kicker": "Gallery",
-    "gal.title": "Hungry for more?",
+    "gal.title": "Our bakery and grill in pictures",
     "gal.c1": "Off the grill",
     "gal.c2": "Freshly baked",
     "gal.c5": "Bread",
 
     "visit.kicker": "Visit us",
-    "visit.title": "Come hungry.<br><em>Leave happy.</em>",
+    "visit.title": "Our bakery in the Ahr Valley.<br><em>Come hungry.</em>",
     "visit.address": "Address",
     "visit.phone": "Phone",
     "visit.hours": "Opening hours",
@@ -190,7 +313,9 @@ window.I18N = {
     "nav.visit": "Bezoek",
     "nav.route": "Route plannen",
 
-    "hero.title": "Vers uit de oven.<br><em>Heet van de grill.</em>",
+    "hero.title1": "Vers uit de oven.",
+    "hero.title2": "Heet van de grill.",
+    "gal.hint": "Sleep of veeg opzij om te bladeren",
     "hero.lead": "Krokante burek, sappige ćevapi en baklava naar familierecept – de bakkerij en grill van de Balkan, midden in het Ahrdal.",
     "hero.cta1": "Bekijk het menu",
     "hero.cta2": "Zo vindt u ons",
@@ -209,7 +334,7 @@ window.I18N = {
     seal: "· HANDGEMAAKT · VERS GEBAKKEN · VAN DE GRILL ",
 
     "menu.kicker": "Menu",
-    "menu.title": "Wat er vandaag op de toonbank ligt",
+    "menu.title": "Burek, ćevapi en baklava: onze kaart",
     "menu.intro": "Een selectie van onze klassiekers. Vraag in de winkel naar de specialiteiten van de dag.",
     "tab.oven": "Uit de oven",
     "tab.grill": "Van de grill",
@@ -264,13 +389,13 @@ window.I18N = {
     "grill.cta": "Naar het grillmenu",
 
     "gal.kicker": "Galerij",
-    "gal.title": "Zin in meer?",
+    "gal.title": "Bakkerij en grill in beeld",
     "gal.c1": "Van de grill",
     "gal.c2": "Vers gebakken",
     "gal.c5": "Brood",
 
     "visit.kicker": "Kom langs",
-    "visit.title": "Kom met honger.<br><em>Ga blij naar huis.</em>",
+    "visit.title": "Onze bakkerij in het Ahrdal.<br><em>Kom met honger.</em>",
     "visit.address": "Adres",
     "visit.phone": "Telefoon",
     "visit.hours": "Openingstijden",
@@ -332,7 +457,9 @@ window.I18N = {
     "nav.visit": "Na vizitoni",
     "nav.route": "Planifiko rrugën",
 
-    "hero.title": "Të freskëta nga furra.<br><em>Të nxehta nga skara.</em>",
+    "hero.title1": "Të freskëta nga furra.",
+    "hero.title2": "Të nxehta nga skara.",
+    "gal.hint": "Tërhiqni ose rrëshqitni anash për të shfletuar",
     "hero.lead": "Byrek krokant, qebapa me lëng dhe bakllava sipas recetës së familjes – furra dhe skara e Ballkanit, në zemër të luginës së Ahrit.",
     "hero.cta1": "Shiko menynë",
     "hero.cta2": "Si të na gjeni",
@@ -351,7 +478,7 @@ window.I18N = {
     seal: "· PUNUAR ME DORË · I FRESKËT · NGA SKARA ",
 
     "menu.kicker": "Menyja",
-    "menu.title": "Çfarë ka sot në banak",
+    "menu.title": "Byrek, qebapa dhe bakllava: menyja jonë",
     "menu.intro": "Një përzgjedhje e klasikëve tanë. Pyesni në lokal për specialitetet e ditës.",
     "tab.oven": "Nga furra",
     "tab.grill": "Nga skara",
@@ -406,13 +533,13 @@ window.I18N = {
     "grill.cta": "Te menyja e skarës",
 
     "gal.kicker": "Galeria",
-    "gal.title": "Ju hapet oreksi?",
+    "gal.title": "Furra dhe skara në fotografi",
     "gal.c1": "Nga skara",
     "gal.c2": "Të freskëta nga furra",
     "gal.c5": "Bukë",
 
     "visit.kicker": "Na vizitoni",
-    "visit.title": "Ejani të uritur.<br><em>Shkoni të lumtur.</em>",
+    "visit.title": "Furra jonë në luginën e Ahrit.<br><em>Ejani të uritur.</em>",
     "visit.address": "Adresa",
     "visit.phone": "Telefoni",
     "visit.hours": "Orari i punës",
