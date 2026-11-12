@@ -9,6 +9,7 @@ index.html        One-page site: hero, tradition, menu, grill, gallery, visit
 css/styles.css    All styles (colour tokens in :root)
 js/main.js        Interactions, language switching + CONFIG with business details
 js/i18n.js        Translations (EN, NL, SQ)
+js/animations.js  GSAP animations (intro, scroll reveals, parallax, menu tabs)
 impressum.html    Legal notice (placeholder)
 datenschutz.html  Privacy policy (placeholder)
 assets/           Favicon
@@ -23,6 +24,11 @@ The site is in **German (default)**, **English**, **Dutch** and **Albanian**.
 - Direct links: `?lang=en`, `?lang=nl`, `?lang=sq`.
 - German text lives in `index.html`. The other languages are in `js/i18n.js`, under the same `data-i18n` keys.
 - To translate a new piece of text, give the element `data-i18n="key"` and add that key to `en`, `nl` and `sq` in `js/i18n.js`.
+
+## Animations
+
+Animations use [GSAP](https://gsap.com) 3.13 (with ScrollTrigger and SplitText), loaded from jsDelivr.
+If GSAP doesn't load, or the visitor has "reduce motion" turned on, the site falls back to simple CSS fade-ins.
 
 ## Before going live
 

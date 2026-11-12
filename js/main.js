@@ -32,6 +32,8 @@ document.documentElement.classList.remove("no-js");
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+// Wenn GSAP geladen ist, übernimmt js/animations.js Einblendungen & Parallax
+const useGsap = !!(window.gsap && window.ScrollTrigger) && !reduceMotion;
 
 /* ---------- Geschäftsdaten einsetzen ---------- */
 (function applyConfig() {
@@ -238,6 +240,7 @@ function renderHours() {
 /* ---------- Scroll-Reveal ---------- */
 (function reveal() {
   const els = $$(".reveal");
+  if (useGsap) return;
   if (reduceMotion || !("IntersectionObserver" in window)) { els.forEach((e) => e.classList.add("is-in")); return; }
   const io = new IntersectionObserver(
     (entries) => entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } }),
@@ -263,7 +266,7 @@ function renderHours() {
 (function parallax() {
   const img = $(".grill__media img");
   const sec = $(".grill");
-  if (!img || reduceMotion) return;
+  if (!img || reduceMotion || useGsap) return;
   let ticking = false;
   const update = () => {
     const r = sec.getBoundingClientRect();
