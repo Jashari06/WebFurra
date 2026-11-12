@@ -109,7 +109,12 @@ p { margin: 0 0 1em; }
   display: flex; align-items: center; justify-content: space-between; gap: 24px;
 }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--cream); }
-.brand__mark { width: 40px; height: 40px; color: var(--honey); flex: none; }
+.brand__logo {
+  width: 64px; height: 64px; flex: none; border-radius: 50%; object-fit: cover;
+  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, .6);
+  transition: width .35s var(--ease), height .35s var(--ease);
+}
+.header.is-solid .brand__logo { width: 50px; height: 50px; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.05; }
 .brand__name { font: 500 1.28rem/1 var(--serif); letter-spacing: .005em; }
 .brand__sub { font: 600 .66rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--honey); margin-top: 6px; }
@@ -470,7 +475,8 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
-  .brand__mark { width: 34px; height: 34px; }
+  .brand__logo { width: 52px; height: 52px; }
+  .header.is-solid .brand__logo { width: 44px; height: 44px; }
   .brand__name { font-size: 1.1rem; white-space: nowrap; }
   .lang__btn { padding: 0 10px; gap: 5px; }
   .lang__btn > svg:first-child { display: none; }
