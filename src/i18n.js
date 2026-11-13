@@ -100,7 +100,7 @@ export const I18N = {
 
     "grill.kicker": "Vom Holzkohlegrill",
     "grill.title": "Zehn Ćevapi, ein warmes Pitalk und eine Handvoll Zwiebeln.",
-    "grill.p": "So schmeckt ein Sommerabend in Sarajevo, Belgrad oder Prishtina – und jetzt auch in Bad Neuenahr-Ahrweiler. Unsere Ćevapi werden über echter Glut gegrillt, bis sie außen kross und innen saftig sind. Dazu Ajvar aus gerösteter Paprika und cremiger Kajmak.",
+    "grill.p": "So schmeckt ein Sommerabend in Sarajevo, Zagreb, Skopje oder Prishtina – und jetzt auch in Bad Neuenahr-Ahrweiler. Unsere Ćevapi werden über echter Glut gegrillt, bis sie außen kross und innen saftig sind. Dazu Ajvar aus gerösteter Paprika und cremiger Kajmak.",
     "grill.onions": "Zwiebeln",
     "grill.cta": "Zum Grill-Menü",
 
@@ -240,7 +240,7 @@ export const I18N = {
 
     "grill.kicker": "From the charcoal grill",
     "grill.title": "Ten ćevapi, a warm pitalk and a handful of onions.",
-    "grill.p": "This is what a summer evening tastes like in Sarajevo, Belgrade or Prishtina – and now in Bad Neuenahr-Ahrweiler too. Our ćevapi are grilled over real embers until crisp outside and juicy inside. Served with ajvar made from roasted peppers and creamy kajmak.",
+    "grill.p": "This is what a summer evening tastes like in Sarajevo, Zagreb, Skopje or Prishtina – and now in Bad Neuenahr-Ahrweiler too. Our ćevapi are grilled over real embers until crisp outside and juicy inside. Served with ajvar made from roasted peppers and creamy kajmak.",
     "grill.onions": "Onions",
     "grill.cta": "See the grill menu",
 
@@ -384,7 +384,7 @@ export const I18N = {
 
     "grill.kicker": "Van de houtskoolgrill",
     "grill.title": "Tien ćevapi, een warme pitalk en een handvol ui.",
-    "grill.p": "Zo smaakt een zomeravond in Sarajevo, Belgrado of Prishtina – en nu ook in Bad Neuenahr-Ahrweiler. Onze ćevapi worden boven echte gloed gegrild tot ze krokant van buiten en sappig van binnen zijn. Met ajvar van geroosterde paprika en romige kajmak.",
+    "grill.p": "Zo smaakt een zomeravond in Sarajevo, Zagreb, Skopje of Prishtina – en nu ook in Bad Neuenahr-Ahrweiler. Onze ćevapi worden boven echte gloed gegrild tot ze krokant van buiten en sappig van binnen zijn. Met ajvar van geroosterde paprika en romige kajmak.",
     "grill.onions": "Ui",
     "grill.cta": "Naar het grillmenu",
 
@@ -528,7 +528,7 @@ export const I18N = {
 
     "grill.kicker": "Nga skara me qymyr",
     "grill.title": "Dhjetë qebapa në pitalk të ngrohtë, me një grusht qepë.",
-    "grill.p": "Kështu shijon një mbrëmje vere në Sarajevë, Beograd apo Prishtinë – dhe tani edhe në Bad Neuenahr-Ahrweiler. Qebapat tanë piqen mbi prush të vërtetë, derisa të jenë krokantë jashtë dhe me lëng brenda. Pranë tyre: ajvar nga speca të pjekur dhe kajmak kremoz.",
+    "grill.p": "Kështu shijon një mbrëmje vere në Sarajevë, Zagreb, Shkup apo Prishtinë – dhe tani edhe në Bad Neuenahr-Ahrweiler. Qebapat tanë piqen mbi prush të vërtetë, derisa të jenë krokantë jashtë dhe me lëng brenda. Pranë tyre: ajvar nga speca të pjekur dhe kajmak kremoz.",
     "grill.onions": "Qepë",
     "grill.cta": "Te menyja e skarës",
 

@@ -9,7 +9,7 @@ const PHOTOS = [
   ['1603360946369-dc9bb6258143', 'gal.c1'],
   ['1767124664944-2df3dcb7a83d', 'd.burek'],
   ['1761828122856-8703baac8e86', 'd.baklava'],
-  ['1640625314547-aee9a7696589', 'Pitalk'],
+  ['assets/img/pitalk.webp', 'Pitalk'], // eigenes Foto der Bäckerei
   ['1777199160034-565d154d41e9', 'd.cevapi'],
   ['1604908552986-eb22824b2150', 'gal.c2'],
   ['1774529233247-d3f34ed11994', 'd.coffee'],
@@ -44,7 +44,11 @@ export default function Gallery() {
   }, []);
 
   const items = useMemo(
-    () => PHOTOS.map(([id, key]) => ({ image: IMG(id, 800), text: plain(key.includes('.') ? t(key) : key) })),
+    () => PHOTOS.map(([id, key]) => ({
+      // eigene Fotos liegen unter public/assets/img, alle anderen kommen von Unsplash
+      image: id.startsWith('assets/') ? id : IMG(id, 800),
+      text: plain(key.includes('.') ? t(key) : key),
+    })),
     [t]
   );
 
