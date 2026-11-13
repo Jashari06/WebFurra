@@ -11,29 +11,29 @@ export const CONFIG = {
 
   // Anschrift. street leer lassen, solange sie nicht feststeht:
   // dann zeigt die Seite einen Platzhalter und die Suchmaschinen-Daten nur den Ort.
-  street: "",
+  street: "Sebastianstraße 2",
   postalCode: "53474",
   city: "Bad Neuenahr-Ahrweiler",
   country: "DE",
 
   // Telefonnummer: Anzeige + Wählformat
-  phoneDisplay: "+49 2641 396600",
-  phoneDial: "+492641396600",
+  phoneDisplay: "+49 2641 3966006",
+  phoneDial: "+4926413966006",
 
   // Öffnungszeiten (0 = Sonntag … 6 = Samstag). null = geschlossen.
-  // ACHTUNG: Platzhalter – echte Zeiten eintragen und danach hoursConfirmed auf true setzen.
+  // Stand 13.11.2026 (laut Google-Unternehmensprofil): Mo–Fr 06–21, Sa–So 07–21 Uhr.
   hours: {
-    1: ["07:00", "20:00"],
-    2: ["07:00", "20:00"],
-    3: ["07:00", "20:00"],
-    4: ["07:00", "20:00"],
-    5: ["07:00", "21:00"],
-    6: ["08:00", "21:00"],
-    0: ["09:00", "18:00"],
+    1: ["06:00", "21:00"],
+    2: ["06:00", "21:00"],
+    3: ["06:00", "21:00"],
+    4: ["06:00", "21:00"],
+    5: ["06:00", "21:00"],
+    6: ["07:00", "21:00"],
+    0: ["07:00", "21:00"],
   },
-  // Erst wenn true: live "Jetzt geöffnet / geschlossen" auf der Seite und
+  // true: live "Jetzt geöffnet / geschlossen" auf der Seite und
   // Öffnungszeiten in den Suchmaschinen-Daten und llms.txt.
-  hoursConfirmed: false,
+  hoursConfirmed: true,
 };
 
 /** Adresse für die Anzeige (HTML) */
