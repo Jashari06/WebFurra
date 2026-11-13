@@ -8,6 +8,7 @@ import SplitText from '../components/reactbits/SplitText/SplitText.jsx';
 const PHOTOS = [
   ['1603360946369-dc9bb6258143', 'gal.c1'],
   ['1767124664944-2df3dcb7a83d', 'd.sirnica'], // Foto zeigt Burek mit Käse
+  ['assets/img/byrek-me-mish.webp', 'd.burek'], // eigenes Foto: Burek mit Fleisch
   ['1761828122856-8703baac8e86', 'd.baklava'],
   ['assets/img/trilece.webp', 'Trileçe'], // eigenes Foto, Name in allen Sprachen gleich
   ['assets/img/pitalk.webp', 'Pitalk'], // eigenes Foto der Bäckerei
