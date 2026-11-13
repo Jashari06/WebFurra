@@ -15,7 +15,7 @@ const PHOTOS = [
   ['1777199160034-565d154d41e9', 'd.cevapi'],
   ['assets/img/supe-pule.webp', 'gal.soup'], // eigenes Foto: Hühnersuppe
   ['assets/img/vitrine.webp', 'gal.c2'], // eigenes Foto: Theke mit Simit, Kifle & Brot
-  ['1774529233247-d3f34ed11994', 'd.coffee'],
+  ['assets/img/caffe.webp', 'Caffè'], // eigenes Foto, Name in allen Sprachen gleich
   ['assets/img/caffe-croissant.webp', 'Caffè & Croissant'], // eigenes Foto, Name in allen Sprachen gleich
   ['1509440159596-0249088772ff', 'gal.c5'],
 ];
