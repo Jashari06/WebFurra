@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef } from 'react';
 import { useI18n, plain } from '../lib/i18n.jsx';
-import { IMG } from '../config.js';
+import { IMG, asset } from '../config.js';
 import { getLenis } from '../lib/smoothScroll.js';
 import CircularGallery from '../components/reactbits/CircularGallery/CircularGallery.jsx';
 import SplitText from '../components/reactbits/SplitText/SplitText.jsx';
@@ -44,13 +44,14 @@ export default function Gallery() {
 
   // Ohne WebGL2 (alte Geräte, gesperrte GPU) zeigt die Galerie eine einfache Foto-Reihe
   const hasWebGL = useMemo(() => {
+    if (typeof document === 'undefined') return true; // beim Vorrendern: Galerie annehmen
     try { return !!document.createElement('canvas').getContext('webgl2'); } catch (_) { return false; }
   }, []);
 
   const items = useMemo(
     () => PHOTOS.map(([id, key]) => ({
       // eigene Fotos liegen unter public/assets/img, alle anderen kommen von Unsplash
-      image: id.startsWith('assets/') ? id : IMG(id, 800),
+      image: id.startsWith('assets/') ? asset(id) : IMG(id, 800),
       text: plain(key.includes('.') ? t(key) : key),
     })),
     [t]

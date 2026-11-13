@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useI18n, Html } from '../lib/i18n.jsx';
-import { CONFIG } from '../config.js';
+import { CONFIG, addressHtml, mapsQuery, asset } from '../config.js';
 import { hoursRows } from '../lib/hours.js';
 import Particles from '../components/reactbits/Particles/Particles.jsx';
 import Magnet from '../components/reactbits/Magnet/Magnet.jsx';
@@ -8,7 +8,7 @@ import Magnet from '../components/reactbits/Magnet/Magnet.jsx';
 export default function Visit() {
   const { t, lang } = useI18n();
   const [mapLoaded, setMapLoaded] = useState(false);
-  const routeHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(CONFIG.mapsQuery)}`;
+  const routeHref = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(mapsQuery())}`;
   const tel = `tel:${CONFIG.phoneDial}`;
 
   return (
@@ -41,7 +41,7 @@ export default function Visit() {
           <dl className="facts reveal">
             <div>
               <dt>{t('visit.address')}</dt>
-              <dd dangerouslySetInnerHTML={{ __html: CONFIG.address }} />
+              <dd dangerouslySetInnerHTML={{ __html: addressHtml() }} />
             </div>
             <div>
               <dt>{t('visit.phone')}</dt>
@@ -78,12 +78,12 @@ export default function Visit() {
                 title={t('mapTitle')}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                src={`https://www.google.com/maps?q=${encodeURIComponent(CONFIG.mapsQuery)}&hl=${lang}&output=embed`}
+                src={`https://www.google.com/maps?q=${encodeURIComponent(mapsQuery())}&hl=${lang}&output=embed`}
               />
             ) : (
               <>
                 {/* eigenes Foto: Theke der Balkan Bäckerei */}
-                <img className="map__preview" loading="lazy" src="assets/img/laden.jpg" width="995" height="1236" alt={t('alt.bakery')} />
+                <img className="map__preview" loading="lazy" src={asset('assets/img/laden.jpg')} width="995" height="1236" alt={t('alt.bakery')} />
                 <div className="map__overlay">
                   <p>{t('map.q')}</p>
                   <small>{t('map.note')}</small>

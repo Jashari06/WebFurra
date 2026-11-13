@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useI18n, Html, plain } from '../lib/i18n.jsx';
-import { IMG } from '../config.js';
+import { IMG, asset } from '../config.js';
 import { prefersReducedMotion } from '../lib/smoothScroll.js';
 import SplitText from '../components/reactbits/SplitText/SplitText.jsx';
 import BlurText from '../components/reactbits/BlurText/BlurText.jsx';
@@ -90,7 +90,7 @@ export default function Menu({ activeTab, setActiveTab }) {
         </div>
 
         <div className="panel" role="tabpanel" id={`panel-${panel.id}`} aria-labelledby={`tab-${panel.id}`} ref={panelRef} key={panel.id}>
-          <figure className="panel__img"><img loading="lazy" src={panel.img.startsWith('assets/') ? panel.img : IMG(panel.img)} alt={t(panel.alt)} /></figure>
+          <figure className="panel__img"><img loading="lazy" src={panel.img.startsWith('assets/') ? asset(panel.img) : IMG(panel.img)} alt={t(panel.alt)} /></figure>
           <ul className="dishes">
             {panel.dishes.map(({ k, price }) => (
               <li className="dish" key={k}>

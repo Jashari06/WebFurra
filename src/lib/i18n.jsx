@@ -1,21 +1,34 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { I18N, LANGS } from '../i18n.js';
 
-/* Startsprache: ?lang=… > laufende Sitzung > immer Deutsch */
-function initialLang() {
+/* Jede Sprache hat ihre eigene Adresse: / (Deutsch), /en/, /nl/, /sq/.
+   Ein frischer Besuch auf / ist immer Deutsch. */
+const BASE = (typeof import.meta !== 'undefined' && import.meta.env?.BASE_URL) || '/';
+
+/** Sprache aus dem Pfad lesen, z. B. "/en/" → "en" */
+export function langFromPath(pathname) {
+  const rest = pathname.startsWith(BASE) ? pathname.slice(BASE.length) : pathname.replace(/^\//, '');
+  const first = rest.split('/')[0];
+  return LANGS.includes(first) && first !== 'de' ? first : 'de';
+}
+
+/** Pfad einer Sprache, z. B. "en" → "/en/" */
+export const langPath = (lang) => (lang === 'de' ? BASE : `${BASE}${lang}/`);
+
+function browserInitialLang() {
+  if (typeof window === 'undefined') return 'de';
+  // Alte Links mit ?lang=en weiter unterstützen
   try {
-    const fromUrl = new URLSearchParams(location.search).get('lang');
-    if (LANGS.includes(fromUrl)) return fromUrl;
-    const s = sessionStorage.getItem('lang');
-    if (LANGS.includes(s)) return s;
-  } catch (_) { /* privates Fenster o. ä. */ }
-  return 'de';
+    const q = new URLSearchParams(location.search).get('lang');
+    if (LANGS.includes(q)) return q;
+  } catch (_) { /* ignore */ }
+  return langFromPath(location.pathname);
 }
 
 const I18nContext = createContext(null);
 
-export function I18nProvider({ children }) {
-  const [lang, setLang] = useState(initialLang);
+export function I18nProvider({ children, initialLang }) {
+  const [lang, setLang] = useState(() => initialLang || browserInitialLang());
 
   const t = useCallback(
     (key, vars = {}) => {
@@ -29,11 +42,11 @@ export function I18nProvider({ children }) {
     document.documentElement.lang = lang;
     document.title = t('meta.title');
     document.querySelector('meta[name="description"]')?.setAttribute('content', t('meta.desc'));
-    try { sessionStorage.setItem('lang', lang); } catch (_) {}
-    const url = new URL(location.href);
-    if (lang === 'de') url.searchParams.delete('lang');
-    else url.searchParams.set('lang', lang);
-    history.replaceState(null, '', url);
+    // Adresse an die Sprache anpassen (ohne Neuladen), Abschnitt (#…) behalten
+    const target = langPath(lang);
+    if (location.pathname !== target || location.search) {
+      history.replaceState(null, '', target + location.hash);
+    }
   }, [lang, t]);
 
   const value = useMemo(() => ({ lang, setLang, t }), [lang, t]);

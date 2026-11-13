@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useI18n } from '../lib/i18n.jsx';
 import { LANGS, I18N } from '../i18n.js';
 import { getLenis } from '../lib/smoothScroll.js';
+import { asset } from '../config.js';
 
 const SECTIONS = [
   ['tradition', 'nav.tradition'],
@@ -69,7 +70,7 @@ export default function Header() {
     <header className={`header${solid ? ' is-solid' : ''}`} id="top">
       <div className="header__inner">
         <a className="brand" href="#top" aria-label={t('aria.home')}>
-          <img className="brand__logo" src="assets/img/logo.webp" width="1254" height="1254" alt="Balkan Bäckerei & Grill" />
+          <img className="brand__logo" src={asset('assets/img/logo.webp')} width="1254" height="1254" alt="Balkan Bäckerei & Grill" />
           <span className="brand__text">
             <span className="brand__name">Balkan Bäckerei</span>
             <span className="brand__sub">&amp; Grill<span className="brand__dot"> · </span><span className="brand__place">Bad Neuenahr-Ahrweiler</span></span>

@@ -3,41 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1c120c">
+  <!-- seo:start · beim Build durch scripts/prerender.mjs pro Sprache ersetzt (Titel, Beschreibung, Canonical, hreflang, Open Graph, JSON-LD) -->
   <title>Balkan Bäckerei &amp; Grill · Bad Neuenahr-Ahrweiler</title>
   <meta name="description" content="Burek frisch aus dem Ofen, Ćevapi vom Holzkohlegrill, Baklava und Kaffee – Balkan Bäckerei &amp; Grill in Bad Neuenahr-Ahrweiler.">
-  <meta name="theme-color" content="#1c120c">
-  <meta property="og:title" content="Balkan Bäckerei &amp; Grill · Bad Neuenahr-Ahrweiler">
-  <meta property="og:description" content="Frisch aus dem Ofen. Heiß vom Grill. Balkanische Backtradition mitten in Bad Neuenahr-Ahrweiler.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1767124664944-2df3dcb7a83d?w=1200&h=630&fit=crop&q=80">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- seo:end -->
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Bakery",
-    "name": "Balkan Bäckerei & Grill",
-    "servesCuisine": ["Balkanisch", "Bosnisch", "Grill", "Backwaren"],
-    "telephone": "+49 2641 396600",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bad Neuenahr-Ahrweiler",
-      "postalCode": "53474",
-      "addressCountry": "DE"
-    }
-  }
-  </script>
 </head>
 <body>
-  <div id="root"></div>
-  <noscript>
-    <p style="padding:24px;font-family:sans-serif">Balkan Bäckerei &amp; Grill · Bad Neuenahr-Ahrweiler – bitte JavaScript aktivieren, um die Seite zu sehen.</p>
-  </noscript>
+  <div id="root"><!--app--></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
