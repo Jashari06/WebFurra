@@ -7,8 +7,8 @@ export const CONFIG = {
   // Suchbegriff für Google Maps (Route & Karte)
   mapsQuery: "Bad Neuenahr-Ahrweiler",
   // Telefonnummer: Anzeige + Wählformat
-  phoneDisplay: "+49 (0) 0000 000000",
-  phoneDial: "+490000000000",
+  phoneDisplay: "+49 2641 396600",
+  phoneDial: "+492641396600",
 
   // Öffnungszeiten (0 = Sonntag … 6 = Samstag). null = geschlossen.
   // ACHTUNG: Platzhalter – echte Zeiten eintragen und danach hoursConfirmed auf true setzen.
