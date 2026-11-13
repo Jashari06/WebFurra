@@ -415,7 +415,11 @@ p { margin: 0 0 1em; }
 .footer__nav { display: flex; flex-wrap: wrap; gap: 14px 28px; justify-content: flex-end; }
 .footer__nav a { text-decoration: none; font-weight: 500; }
 .footer__nav a:hover { color: var(--honey); }
-.footer__copy { grid-column: 1 / -1; margin: 0; padding-top: 24px; border-top: 1px solid var(--line-light); font-size: .82rem; }
+.footer__copy {
+  grid-column: 1 / -1; margin: 0; padding-top: 24px; border-top: 1px solid var(--line-light); font-size: .82rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px;
+}
+.footer__credit b { color: var(--honey); font-weight: 700; letter-spacing: .08em; }
 
 /* ---------- GSAP (src/lib/useScrollAnimations.js) ---------- */
 /* .reveal-Elemente werden von GSAP vor dem ersten Zeichnen ausgeblendet. */

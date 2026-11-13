@@ -19,7 +19,10 @@ export default function Footer() {
           <a href="impressum.html">{t('footer.imprint')}</a>
           <a href="datenschutz.html">{t('footer.privacy')}</a>
         </nav>
-        <p className="footer__copy">© {new Date().getFullYear()} Balkan Bäckerei &amp; Grill · {t('footer.photos')}</p>
+        <div className="footer__copy">
+          <span>© {new Date().getFullYear()} Balkan Bäckerei &amp; Grill</span>
+          <span className="footer__credit">Powered by <b>DARD</b></span>
+        </div>
       </div>
     </footer>
   );
