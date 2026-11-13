@@ -20,7 +20,7 @@ export default function Footer() {
           <a href="datenschutz.html">{t('footer.privacy')}</a>
         </nav>
         <div className="footer__copy">
-          <span>© {new Date().getFullYear()} Balkan Bäckerei &amp; Grill</span>
+          <span>© {new Date().getFullYear()} Balkan Bäckerei &amp; Grill · {t('footer.rights')}</span>
           <span className="footer__credit">Powered by <b>DARD</b></span>
         </div>
       </div>

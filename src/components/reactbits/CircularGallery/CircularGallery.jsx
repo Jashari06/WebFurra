@@ -251,6 +251,8 @@ const CircularGallery = ({
   dpr,
   className = '',
   style,
+  // WebFurra: translatable screen-reader labels (originally hard-coded English)
+  labels = { gallery: 'Image gallery', close: 'Close', of: 'of', image: 'Image' },
   ...rest
 }) => {
   const containerRef = useRef(null);
@@ -1065,7 +1067,7 @@ const CircularGallery = ({
       style={{ color: textColor, ...style }}
       role="region"
       aria-roledescription="carousel"
-      aria-label="Image gallery"
+      aria-label={labels.gallery}
       {...rest}
     >
       <canvas ref={canvasRef} className={CLASSES.canvas} aria-hidden="true" />
@@ -1079,7 +1081,7 @@ const CircularGallery = ({
         data-gallery-close=""
         data-visible={open ? '' : undefined}
         tabIndex={open ? 0 : -1}
-        aria-label="Close"
+        aria-label={labels.close}
         onClick={() => engineRef.current?.close()}
       >
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
@@ -1095,12 +1097,12 @@ const CircularGallery = ({
                 buttonsRef.current[index] = el;
               }}
               tabIndex={index === active ? 0 : -1}
-              aria-label={`${item.text || item.alt || 'Image'}, ${index + 1} of ${count}`}
+              aria-label={`${item.text || item.alt || labels.image}, ${index + 1} ${labels.of} ${count}`}
               aria-current={index === active ? 'true' : undefined}
               onFocus={() => engineRef.current?.focus(index)}
               onClick={() => engineRef.current?.open(index)}
             >
-              {item.text || item.alt || `Image ${index + 1}`}
+              {item.text || item.alt || `${labels.image} ${index + 1}`}
             </button>
           </li>
         ))}

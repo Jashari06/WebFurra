@@ -23,11 +23,11 @@ export const I18N = {
     "aria.menuOpen": "Menü öffnen",
     "aria.menuClose": "Menü schließen",
 
-    "nav.tradition": "Tradition",
+    "nav.tradition": "Über uns",
     "nav.menu": "Speisekarte",
     "nav.grill": "Grill",
     "nav.gallery": "Galerie",
-    "nav.visit": "Besuch",
+    "nav.visit": "Kontakt",
     "nav.route": "Route planen",
 
     "hero.title1": "Frisch aus dem Ofen.",
@@ -49,11 +49,11 @@ export const I18N = {
     "trad.l3": "Über echter Holzkohle gegrillt",
     seal: "· HANDGEMACHT · FRISCH GEBACKEN · VOM GRILL ",
 
-    "menu.kicker": "Speisekarte",
+    "menu.kicker": "Unsere Spezialitäten",
     "menu.title": "Burek, Ćevapi und Baklava – unsere Karte",
     "menu.intro": "Eine Auswahl unserer Klassiker. Fragen Sie im Laden nach den Spezialitäten des Tages.",
-    "tab.oven": "Aus dem Ofen",
-    "tab.grill": "Vom Grill",
+    "tab.oven": "Bäckerei",
+    "tab.grill": "Grillspezialitäten",
     "tab.sweet": "Süßes",
     "tab.drinks": "Getränke",
 
@@ -112,7 +112,7 @@ export const I18N = {
     "gal.c5": "Brot",
     "gal.soup": "Hühnersuppe",
 
-    "visit.kicker": "Besuchen Sie uns",
+    "visit.kicker": "Kontakt & Anfahrt",
     "visit.title": "Unsere Bäckerei in Bad Neuenahr-Ahrweiler.<br><em>Kommen Sie hungrig.</em>",
     "visit.address": "Adresse",
     "visit.phone": "Telefon",
@@ -126,6 +126,11 @@ export const I18N = {
     "footer.imprint": "Impressum",
     "footer.privacy": "Datenschutz",
     "footer.photos": "Fotos: Unsplash",
+    "gal.image": "Bild",
+    "gal.of": "von",
+    "gal.close": "Schließen",
+    "gal.aria": "Bildergalerie",
+    "footer.rights": "Alle Rechte vorbehalten",
 
     "alt.dough": "Hände kneten Teig auf einer bemehlten Holzplatte",
     "alt.oven": "Brot im glühenden Steinofen",
@@ -163,11 +168,11 @@ export const I18N = {
     "aria.menuOpen": "Open menu",
     "aria.menuClose": "Close menu",
 
-    "nav.tradition": "Tradition",
+    "nav.tradition": "About us",
     "nav.menu": "Menu",
     "nav.grill": "Grill",
     "nav.gallery": "Gallery",
-    "nav.visit": "Visit",
+    "nav.visit": "Contact",
     "nav.route": "Get directions",
 
     "hero.title1": "Fresh from the oven.",
@@ -190,11 +195,11 @@ export const I18N = {
     "trad.l3": "Grilled over real charcoal",
     seal: "· HANDMADE · FRESHLY BAKED · OFF THE GRILL ",
 
-    "menu.kicker": "Menu",
+    "menu.kicker": "Our specialities",
     "menu.title": "Burek, ćevapi and baklava: our menu",
     "menu.intro": "A selection of our classics. Ask in store about today’s specials.",
-    "tab.oven": "From the oven",
-    "tab.grill": "From the grill",
+    "tab.oven": "Bakery",
+    "tab.grill": "Grill specialities",
     "tab.sweet": "Sweets",
     "tab.drinks": "Drinks",
 
@@ -252,7 +257,7 @@ export const I18N = {
     "gal.c5": "Bread",
     "gal.soup": "Chicken soup",
 
-    "visit.kicker": "Visit us",
+    "visit.kicker": "Contact & directions",
     "visit.title": "Our bakery in Bad Neuenahr-Ahrweiler.<br><em>Come hungry.</em>",
     "visit.address": "Address",
     "visit.phone": "Phone",
@@ -266,6 +271,11 @@ export const I18N = {
     "footer.imprint": "Legal notice",
     "footer.privacy": "Privacy",
     "footer.photos": "Photos: Unsplash",
+    "gal.image": "Image",
+    "gal.of": "of",
+    "gal.close": "Close",
+    "gal.aria": "Image gallery",
+    "footer.rights": "All rights reserved",
 
     "alt.dough": "Hands kneading dough on a floured wooden board",
     "alt.oven": "Bread in a glowing stone oven",
@@ -308,11 +318,11 @@ export const I18N = {
     "aria.menuOpen": "Menu openen",
     "aria.menuClose": "Menu sluiten",
 
-    "nav.tradition": "Traditie",
+    "nav.tradition": "Over ons",
     "nav.menu": "Menu",
     "nav.grill": "Grill",
     "nav.gallery": "Galerij",
-    "nav.visit": "Bezoek",
+    "nav.visit": "Contact",
     "nav.route": "Route plannen",
 
     "hero.title1": "Vers uit de oven.",
@@ -335,11 +345,11 @@ export const I18N = {
     "trad.l3": "Gegrild boven echte houtskool",
     seal: "· HANDGEMAAKT · VERS GEBAKKEN · VAN DE GRILL ",
 
-    "menu.kicker": "Menu",
+    "menu.kicker": "Onze specialiteiten",
     "menu.title": "Burek, ćevapi en baklava: onze kaart",
     "menu.intro": "Een selectie van onze klassiekers. Vraag in de winkel naar de specialiteiten van de dag.",
-    "tab.oven": "Uit de oven",
-    "tab.grill": "Van de grill",
+    "tab.oven": "Bakkerij",
+    "tab.grill": "Grillspecialiteiten",
     "tab.sweet": "Zoetigheid",
     "tab.drinks": "Dranken",
 
@@ -397,7 +407,7 @@ export const I18N = {
     "gal.c5": "Brood",
     "gal.soup": "Kippensoep",
 
-    "visit.kicker": "Kom langs",
+    "visit.kicker": "Contact & route",
     "visit.title": "Onze bakkerij in Bad Neuenahr-Ahrweiler.<br><em>Kom met honger.</em>",
     "visit.address": "Adres",
     "visit.phone": "Telefoon",
@@ -411,6 +421,11 @@ export const I18N = {
     "footer.imprint": "Colofon",
     "footer.privacy": "Privacy",
     "footer.photos": "Foto’s: Unsplash",
+    "gal.image": "Afbeelding",
+    "gal.of": "van",
+    "gal.close": "Sluiten",
+    "gal.aria": "Fotogalerij",
+    "footer.rights": "Alle rechten voorbehouden",
 
     "alt.dough": "Handen kneden deeg op een met bloem bestoven houten plank",
     "alt.oven": "Brood in een gloeiende steenoven",
@@ -453,11 +468,11 @@ export const I18N = {
     "aria.menuOpen": "Hap menynë",
     "aria.menuClose": "Mbyll menynë",
 
-    "nav.tradition": "Tradita",
+    "nav.tradition": "Rreth nesh",
     "nav.menu": "Menyja",
     "nav.grill": "Skara",
     "nav.gallery": "Galeria",
-    "nav.visit": "Na vizitoni",
+    "nav.visit": "Kontakt",
     "nav.route": "Planifiko rrugën",
 
     "hero.title1": "Të freskëta nga furra.",
@@ -480,11 +495,11 @@ export const I18N = {
     "trad.l3": "I pjekur mbi qymyr të vërtetë",
     seal: "· PUNUAR ME DORË · I FRESKËT · NGA SKARA ",
 
-    "menu.kicker": "Menyja",
+    "menu.kicker": "Specialitetet tona",
     "menu.title": "Byrek, qebapa dhe bakllava: menyja jonë",
     "menu.intro": "Një përzgjedhje e klasikëve tanë. Pyesni në lokal për specialitetet e ditës.",
-    "tab.oven": "Nga furra",
-    "tab.grill": "Nga skara",
+    "tab.oven": "Furra",
+    "tab.grill": "Specialitete të skarës",
     "tab.sweet": "Ëmbëlsira",
     "tab.drinks": "Pije",
 
@@ -542,7 +557,7 @@ export const I18N = {
     "gal.c5": "Bukë",
     "gal.soup": "Supë pule",
 
-    "visit.kicker": "Na vizitoni",
+    "visit.kicker": "Kontakt & vendndodhja",
     "visit.title": "Furra jonë në Bad Neuenahr-Ahrweiler.<br><em>Ejani të uritur.</em>",
     "visit.address": "Adresa",
     "visit.phone": "Telefoni",
@@ -556,6 +571,11 @@ export const I18N = {
     "footer.imprint": "Impressum",
     "footer.privacy": "Privatësia",
     "footer.photos": "Foto: Unsplash",
+    "gal.image": "Foto",
+    "gal.of": "nga",
+    "gal.close": "Mbyll",
+    "gal.aria": "Galeria e fotove",
+    "footer.rights": "Të gjitha të drejtat e rezervuara",
 
     "alt.dough": "Duar që gatuajnë brumë mbi një dërrasë me miell",
     "alt.oven": "Bukë në një furrë guri të ndezur",

@@ -91,6 +91,7 @@ export default function Gallery() {
           shadow={0.3}
           autoScroll={0.35}
           openOnClick={false}
+          labels={{ gallery: t('gal.aria'), close: t('gal.close'), of: t('gal.of'), image: t('gal.image') }}
         />
       </div>
       )}
