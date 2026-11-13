@@ -15,7 +15,7 @@ export const PANELS = [
     dishes: ['cevapi', 'pljeskavica', 'filled', 'sudzuk', 'chicken', 'platter'].map((k) => ({ k })) },
   { id: 'suess', tab: 'tab.sweet', img: '1761828122856-8703baac8e86', alt: 'alt.baklava',
     dishes: ['baklava', 'tulumbe', 'kadaif', 'tufahija'].map((k) => ({ k })) },
-  { id: 'trinken', tab: 'tab.drinks', img: '1774529233247-d3f34ed11994', alt: 'alt.coffee',
+  { id: 'trinken', tab: 'tab.drinks', img: 'assets/img/caffe.webp', alt: 'alt.coffee', // eigenes Foto
     dishes: ['coffee', 'yogurt', 'tea', 'soft'].map((k) => ({ k })) },
 ];
 
