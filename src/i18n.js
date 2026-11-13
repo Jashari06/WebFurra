@@ -133,7 +133,7 @@ export const I18N = {
     "alt.cevapi": "Gegrillte Ćevapi mit roter Paprikasoße",
     "alt.baklava": "Goldene Baklava mit gehackten Pistazien",
     "alt.coffee": "Bosnischer Kaffee wird aus einer traditionellen Kanne eingeschenkt",
-    "alt.bakery": "Blick in eine Bäckerei mit Gebäck in der Theke",
+    "alt.bakery": "Kunden an der Theke der Balkan Bäckerei mit frischem Gebäck",
 
     days: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
     timeRange: "{a} – {b} Uhr",
@@ -277,7 +277,7 @@ export const I18N = {
     "alt.flatbread": "A stack of flatbreads on a wooden board",
     "alt.baklava2": "Baklava with nuts in a glass bowl",
     "alt.bread": "Rustic loaves with ears of wheat",
-    "alt.bakery": "Inside a bakery with pastries in the counter",
+    "alt.bakery": "Customers at the Balkan Bäckerei counter with fresh pastries",
 
     days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     timeRange: "{a} – {b}",
@@ -421,7 +421,7 @@ export const I18N = {
     "alt.flatbread": "Een stapel platbroden op een houten plank",
     "alt.baklava2": "Baklava met noten in een glazen schaal",
     "alt.bread": "Rustieke broden met tarwearen",
-    "alt.bakery": "Blik in een bakkerij met gebak in de toonbank",
+    "alt.bakery": "Klanten aan de toonbank van Balkan Bäckerei met vers gebak",
 
     days: ["Zondag", "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag"],
     timeRange: "{a} – {b}",
@@ -565,7 +565,7 @@ export const I18N = {
     "alt.flatbread": "Një pirg bukësh të sheshta mbi një dërrasë druri",
     "alt.baklava2": "Bakllava me arra në një tas xhami",
     "alt.bread": "Bukë fshati me kallinj gruri",
-    "alt.bakery": "Pamje nga brenda një furre me pasta në banak",
+    "alt.bakery": "Klientë te banaku i Balkan Bäckerei me pasta të freskëta",
 
     days: ["E diel", "E hënë", "E martë", "E mërkurë", "E enjte", "E premte", "E shtunë"],
     timeRange: "{a} – {b}",

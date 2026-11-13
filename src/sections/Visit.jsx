@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useI18n, Html } from '../lib/i18n.jsx';
-import { CONFIG, IMG } from '../config.js';
+import { CONFIG } from '../config.js';
 import { hoursRows } from '../lib/hours.js';
 import Particles from '../components/reactbits/Particles/Particles.jsx';
 import Magnet from '../components/reactbits/Magnet/Magnet.jsx';
@@ -82,7 +82,8 @@ export default function Visit() {
               />
             ) : (
               <>
-                <img className="map__preview" loading="lazy" src={IMG('1657498023828-1e0181449d9f', 1100)} alt={t('alt.bakery')} />
+                {/* eigenes Foto: Theke der Balkan Bäckerei */}
+                <img className="map__preview" loading="lazy" src="assets/img/laden.jpg" width="995" height="1236" alt={t('alt.bakery')} />
                 <div className="map__overlay">
                   <p>{t('map.q')}</p>
                   <small>{t('map.note')}</small>
