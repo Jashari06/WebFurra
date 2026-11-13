@@ -536,6 +536,14 @@ p { margin: 0 0 1em; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
 
+/* Ortsname im Logo-Untertitel nie mitten im Wort umbrechen */
+.brand__place { white-space: nowrap; }
+@media (max-width: 640px) {
+  .brand__sub { letter-spacing: .12em; font-size: .6rem; }
+  .brand__dot { display: none; }
+  .brand__place { display: block; margin-top: 3px; }
+}
+
 /* Sehr schmale Telefone (320px): nur das Logo, damit Sprache + Menü Platz haben */
 @media (max-width: 360px) {
   .brand__text { display: none; }

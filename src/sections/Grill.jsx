@@ -19,7 +19,7 @@ export default function Grill({ openGrillTab }) {
           <h2 id="grill-title">{t('grill.title')}</h2>
           <p>{t('grill.p')}</p>
           <div className="grill__chips">
-            <span>Ajvar</span><span>Kajmak</span><span>Lepinja</span><span>{t('grill.onions')}</span>
+            <span>Ajvar</span><span>Kajmak</span><span>Pitalk</span><span>{t('grill.onions')}</span>
           </div>
           <Magnet padding={60} magnetStrength={4}>
             <a className="btn btn--primary" href="#speisekarte" onClick={openGrillTab}>{t('grill.cta')}</a>

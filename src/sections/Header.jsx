@@ -72,7 +72,7 @@ export default function Header() {
           <img className="brand__logo" src="assets/img/logo.webp" width="1254" height="1254" alt="Balkan Bäckerei & Grill" />
           <span className="brand__text">
             <span className="brand__name">Balkan Bäckerei</span>
-            <span className="brand__sub">&amp; Grill · Ahrtal</span>
+            <span className="brand__sub">&amp; Grill<span className="brand__dot"> · </span><span className="brand__place">Bad Neuenahr-Ahrweiler</span></span>
           </span>
         </a>
 
