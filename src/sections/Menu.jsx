@@ -9,7 +9,7 @@ import BlurText from '../components/reactbits/BlurText/BlurText.jsx';
 
 /* Preise: in i18n bleibt der Name; Preis hier ergänzen, z. B. price: '4,50 €' */
 export const PANELS = [
-  { id: 'ofen', tab: 'tab.oven', img: '1785884040273-345673bee948', alt: 'alt.pastry',
+  { id: 'ofen', tab: 'tab.oven', img: 'assets/img/burek-theke.webp', alt: 'alt.pastry', // eigenes Foto
     dishes: ['burek', 'sirnica', 'zeljanica', 'krompirusa', 'lepinja', 'pogaca'].map((k) => ({ k })) },
   { id: 'grill', tab: 'tab.grill', img: '1777199160034-565d154d41e9', alt: 'alt.cevapi',
     dishes: ['cevapi', 'pljeskavica', 'filled', 'sudzuk', 'chicken', 'platter'].map((k) => ({ k })) },
@@ -90,7 +90,7 @@ export default function Menu({ activeTab, setActiveTab }) {
         </div>
 
         <div className="panel" role="tabpanel" id={`panel-${panel.id}`} aria-labelledby={`tab-${panel.id}`} ref={panelRef} key={panel.id}>
-          <figure className="panel__img"><img loading="lazy" src={IMG(panel.img)} alt={t(panel.alt)} /></figure>
+          <figure className="panel__img"><img loading="lazy" src={panel.img.startsWith('assets/') ? panel.img : IMG(panel.img)} alt={t(panel.alt)} /></figure>
           <ul className="dishes">
             {panel.dishes.map(({ k, price }) => (
               <li className="dish" key={k}>
