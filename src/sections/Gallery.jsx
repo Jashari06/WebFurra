@@ -7,17 +7,20 @@ import SplitText from '../components/reactbits/SplitText/SplitText.jsx';
 
 const PHOTOS = [
   ['1603360946369-dc9bb6258143', 'gal.c1'],
-  ['1767124664944-2df3dcb7a83d', 'd.burek'],
+  ['1767124664944-2df3dcb7a83d', 'd.sirnica'], // Foto zeigt Burek mit Käse
   ['1761828122856-8703baac8e86', 'd.baklava'],
+  ['assets/img/trilece.webp', 'Trileçe'], // eigenes Foto, Name in allen Sprachen gleich
   ['assets/img/pitalk.webp', 'Pitalk'], // eigenes Foto der Bäckerei
   ['1777199160034-565d154d41e9', 'd.cevapi'],
-  ['1604908552986-eb22824b2150', 'gal.c2'],
+  ['assets/img/supe-pule.webp', 'gal.soup'], // eigenes Foto: Hühnersuppe
+  ['assets/img/vitrine.webp', 'gal.c2'], // eigenes Foto: Theke mit Simit, Kifle & Brot
   ['1774529233247-d3f34ed11994', 'd.coffee'],
+  ['assets/img/caffe-croissant.webp', 'Caffè & Croissant'], // eigenes Foto, Name in allen Sprachen gleich
   ['1509440159596-0249088772ff', 'gal.c5'],
 ];
 
 export default function Gallery() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const stageRef = useRef(null);
 
   // Vertikales Mausrad scrollt die Seite weiter (statt in der Galerie hängen zu bleiben);
@@ -73,6 +76,7 @@ export default function Gallery() {
       ) : (
       <div className="gallery__stage reveal" ref={stageRef}>
         <CircularGallery
+          key={lang} /* liest die Beschriftungen nur beim Start: bei Sprachwechsel neu aufbauen */
           items={items}
           bend={2.2}
           textColor="#2a1c13"

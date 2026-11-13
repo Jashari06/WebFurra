@@ -110,6 +110,7 @@ export const I18N = {
     "gal.c1": "Vom Grill",
     "gal.c2": "Frisch gebacken",
     "gal.c5": "Brot",
+    "gal.soup": "Hühnersuppe",
 
     "visit.kicker": "Besuchen Sie uns",
     "visit.title": "Unsere Bäckerei in Bad Neuenahr-Ahrweiler.<br><em>Kommen Sie hungrig.</em>",
@@ -249,6 +250,7 @@ export const I18N = {
     "gal.c1": "Off the grill",
     "gal.c2": "Freshly baked",
     "gal.c5": "Bread",
+    "gal.soup": "Chicken soup",
 
     "visit.kicker": "Visit us",
     "visit.title": "Our bakery in Bad Neuenahr-Ahrweiler.<br><em>Come hungry.</em>",
@@ -393,6 +395,7 @@ export const I18N = {
     "gal.c1": "Van de grill",
     "gal.c2": "Vers gebakken",
     "gal.c5": "Brood",
+    "gal.soup": "Kippensoep",
 
     "visit.kicker": "Kom langs",
     "visit.title": "Onze bakkerij in Bad Neuenahr-Ahrweiler.<br><em>Kom met honger.</em>",
@@ -537,6 +540,7 @@ export const I18N = {
     "gal.c1": "Nga skara",
     "gal.c2": "Të freskëta nga furra",
     "gal.c5": "Bukë",
+    "gal.soup": "Supë pule",
 
     "visit.kicker": "Na vizitoni",
     "visit.title": "Furra jonë në Bad Neuenahr-Ahrweiler.<br><em>Ejani të uritur.</em>",
