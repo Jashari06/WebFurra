@@ -5,9 +5,10 @@
    ========================================================= */
 export const CONFIG = {
   // Öffentliche Adresse der Website, ohne Schrägstrich am Ende.
-  // ACHTUNG: Platzhalter – vor dem Veröffentlichen die echte Domain eintragen.
-  siteUrl: "https://www.example.com",
-  siteUrlConfirmed: false,
+  // Domain: balkan-bäeckerei-grill.de (vom Inhaber so angegeben, 17.11.2026).
+  // Umlaut-Domains stehen in Links in der ASCII-Form (Punycode) – Browser zeigen sie mit "ä" an.
+  siteUrl: "https://xn--balkan-beckerei-grill-d2b.de",
+  siteUrlConfirmed: true,
 
   // Anschrift. street leer lassen, solange sie nicht feststeht:
   // dann zeigt die Seite einen Platzhalter und die Suchmaschinen-Daten nur den Ort.
