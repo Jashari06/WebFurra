@@ -119,7 +119,6 @@ export const I18N = {
     "galalt.burekYogurt": "Burek mit Fleisch und Joghurt",
     "galalt.roll": "Gefülltes Hefegebäck, aufgeschnitten",
     "galalt.seats": "Sitzplätze am Fenster in der Bäckerei",
-    "galalt.grill2": "Fleisch auf dem Grill, frisch gewendet",
     "galalt.dough": "Croissants vor dem Backen auf dem Blech",
 
     "visit.kicker": "Kontakt & Anfahrt",
@@ -274,7 +273,6 @@ export const I18N = {
     "galalt.burekYogurt": "Meat burek with yoghurt",
     "galalt.roll": "A filled yeast pastry, cut open",
     "galalt.seats": "Window seating inside the bakery",
-    "galalt.grill2": "Meat on the grill",
     "galalt.dough": "Croissants on a baking tray before baking",
 
     "visit.kicker": "Contact & directions",
@@ -434,7 +432,6 @@ export const I18N = {
     "galalt.burekYogurt": "Burek met vlees en yoghurt",
     "galalt.roll": "Gevuld gistgebak, opengesneden",
     "galalt.seats": "Zitplaatsen bij het raam in de bakkerij",
-    "galalt.grill2": "Vlees op de grill",
     "galalt.dough": "Croissants op een bakplaat, klaar voor de oven",
 
     "visit.kicker": "Contact & route",
@@ -594,7 +591,6 @@ export const I18N = {
     "galalt.burekYogurt": "Byrek me mish dhe kos",
     "galalt.roll": "Brumë i mbushur me maja, i prerë",
     "galalt.seats": "Vende për t’u ulur pranë dritares në furrë",
-    "galalt.grill2": "Mish në skarë",
     "galalt.dough": "Kroasanë në tepsi, gati për furrë",
 
     "visit.kicker": "Kontakt & vendndodhja",

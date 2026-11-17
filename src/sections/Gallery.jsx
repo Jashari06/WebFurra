@@ -25,7 +25,6 @@ const PHOTOS = [
   ['assets/img/supe-pule.webp', 'gal.soup'],
   ['assets/img/gal-sitzecke.jpg', 'galalt.seats'],
   ['assets/img/vitrine.webp', 'gal.c2'],
-  ['assets/img/gal-grill-2.webp', 'galalt.grill2'],
   ['assets/img/caffe.webp', 'Caffè'],
   ['assets/img/gal-croissant-teig.jpg', 'galalt.dough'],
   ['assets/img/caffe-croissant.webp', 'Caffè & Croissant'],
