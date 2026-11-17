@@ -5,18 +5,30 @@ import { getLenis } from '../lib/smoothScroll.js';
 import CircularGallery from '../components/reactbits/CircularGallery/CircularGallery.jsx';
 import SplitText from '../components/reactbits/SplitText/SplitText.jsx';
 
+// Keine sichtbare Beschriftung (showTitles={false}); der Text dient nur als Bildbeschreibung
+// für Screenreader und Suchmaschinen.
 const PHOTOS = [
   ['1603360946369-dc9bb6258143', 'gal.c1'],
+  ['assets/img/gal-grill.jpg', 'galalt.grill'],
   ['1767124664944-2df3dcb7a83d', 'd.sirnica'], // Foto zeigt Burek mit Käse
+  ['assets/img/gal-burek-teller.jpg', 'galalt.burekPlate'],
   ['assets/img/byrek-me-mish.webp', 'd.burek'], // eigenes Foto: Burek mit Fleisch
+  ['assets/img/gal-laden.jpg', 'galalt.shop'],
   ['1761828122856-8703baac8e86', 'd.baklava'],
-  ['assets/img/trilece.webp', 'Trileçe'], // eigenes Foto, Name in allen Sprachen gleich
-  ['assets/img/pitalk.webp', 'Pitalk'], // eigenes Foto der Bäckerei
+  ['assets/img/gal-croissant.jpg', 'galalt.croissant'],
+  ['assets/img/trilece.webp', 'Trileçe'],
+  ['assets/img/gal-theke.jpg', 'galalt.counter'],
+  ['assets/img/pitalk.webp', 'Pitalk'],
+  ['assets/img/gal-burek-jogurt.jpg', 'galalt.burekYogurt'],
   ['1777199160034-565d154d41e9', 'd.cevapi'],
-  ['assets/img/supe-pule.webp', 'gal.soup'], // eigenes Foto: Hühnersuppe
-  ['assets/img/vitrine.webp', 'gal.c2'], // eigenes Foto: Theke mit Simit, Kifle & Brot
-  ['assets/img/caffe.webp', 'Caffè'], // eigenes Foto, Name in allen Sprachen gleich
-  ['assets/img/caffe-croissant.webp', 'Caffè & Croissant'], // eigenes Foto, Name in allen Sprachen gleich
+  ['assets/img/gal-nussrolle.jpg', 'galalt.roll'],
+  ['assets/img/supe-pule.webp', 'gal.soup'],
+  ['assets/img/gal-sitzecke.jpg', 'galalt.seats'],
+  ['assets/img/vitrine.webp', 'gal.c2'],
+  ['assets/img/gal-grill-2.webp', 'galalt.grill2'],
+  ['assets/img/caffe.webp', 'Caffè'],
+  ['assets/img/gal-croissant-teig.jpg', 'galalt.dough'],
+  ['assets/img/caffe-croissant.webp', 'Caffè & Croissant'],
   ['1509440159596-0249088772ff', 'gal.c5'],
 ];
 
@@ -72,7 +84,7 @@ export default function Gallery() {
       {!hasWebGL ? (
         <div className="gallery__fallback reveal">
           {items.map((it) => (
-            <figure key={it.image}><img loading="lazy" src={it.image} alt={it.text} /><figcaption>{it.text}</figcaption></figure>
+            <figure key={it.image}><img loading="lazy" src={it.image} alt={it.text} /></figure>
           ))}
         </div>
       ) : (
@@ -91,6 +103,7 @@ export default function Gallery() {
           gap={0.24}
           shadow={0.3}
           autoScroll={0.35}
+          showTitles={false}
           openOnClick={false}
           labels={{ gallery: t('gal.aria'), close: t('gal.close'), of: t('gal.of'), image: t('gal.image') }}
         />
