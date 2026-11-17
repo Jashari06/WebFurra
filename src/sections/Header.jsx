@@ -3,6 +3,7 @@ import { useI18n } from '../lib/i18n.jsx';
 import { LANGS, I18N } from '../i18n.js';
 import { getLenis } from '../lib/smoothScroll.js';
 import { asset } from '../config.js';
+import Social from '../components/Social.jsx';
 
 const SECTIONS = [
   ['tradition', 'nav.tradition'],
@@ -84,9 +85,11 @@ export default function Header() {
             </a>
           ))}
           <a className="btn btn--primary nav__cta" href="#besuch" onClick={() => setMenuOpen(false)}>{t('nav.route')}</a>
+          <Social className="social--nav" />
         </nav>
 
         <div className="header__tools">
+          <Social className="social--header" />
           <div className={`lang${langOpen ? ' is-open' : ''}`} ref={langRef}>
             <button
               ref={langBtnRef}

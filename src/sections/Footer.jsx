@@ -1,5 +1,6 @@
 import { useI18n, Html } from '../lib/i18n.jsx';
 import { asset } from '../config.js';
+import Social from '../components/Social.jsx';
 
 export default function Footer() {
   const { t } = useI18n();
@@ -12,6 +13,7 @@ export default function Footer() {
           <div>
             <p className="footer__name">Balkan Bäckerei &amp; Grill</p>
             <Html as="p" className="footer__tag" k="footer.tag" />
+            <Social className="social--footer" />
           </div>
         </div>
         <nav className="footer__nav" aria-label={t('aria.footer')}>

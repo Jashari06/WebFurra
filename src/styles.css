@@ -168,6 +168,19 @@ p { margin: 0 0 1em; }
 .lang__list button[aria-checked="true"]::after { content: "✓"; margin-left: auto; color: var(--ember); }
 .nav__cta { margin-left: -6px; }
 
+/* Social-Media-Symbole (Header, mobiles Menü, Footer) */
+.social { display: flex; align-items: center; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.social a {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid rgba(247, 238, 226, .28); background: rgba(26, 17, 11, .25); color: var(--cream);
+  transition: border-color .25s, color .25s, transform .25s var(--ease);
+}
+.social a:hover { border-color: var(--honey); color: var(--honey); transform: translateY(-2px); }
+.social svg { width: 17px; height: 17px; fill: currentColor; }
+.social--nav { display: none; }
+.social--footer { margin-top: 18px; }
+@media (max-width: 1180px) { .social--header { display: none; } }
+
 .burger { display: none; width: 44px; height: 44px; border: 0; background: none; cursor: pointer; position: relative; z-index: 2; }
 .burger span { display: block; width: 24px; height: 2px; background: var(--cream); margin: 5px auto; border-radius: 2px; transition: transform .3s, opacity .3s; }
 .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -483,6 +496,8 @@ p { margin: 0 0 1em; }
 
 @media (max-width: 860px) {
   .burger { display: block; }
+  .nav.is-open .social--nav { display: flex; gap: 12px; margin-top: 4px; }
+  .social--nav a { width: 46px; height: 46px; }
   .nav {
     position: fixed; inset: 0; flex-direction: column; justify-content: center; gap: 26px;
     background: rgba(26,17,11,.97); backdrop-filter: blur(10px);

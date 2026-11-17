@@ -34,6 +34,15 @@ export const CONFIG = {
   // true: live "Jetzt geöffnet / geschlossen" auf der Seite und
   // Öffnungszeiten in den Suchmaschinen-Daten und llms.txt.
   hoursConfirmed: true,
+
+  // Social-Media-Profile (volle Adresse, z. B. "https://www.instagram.com/…").
+  // Leer = Symbol wird auf der veröffentlichten Seite nicht angezeigt
+  // (nur in der lokalen Vorschau, damit man das Aussehen prüfen kann).
+  social: {
+    facebook: "https://www.facebook.com/p/Balkan-B%C3%A4ckerei-Bad-Neuenahr-61574319524206/",
+    instagram: "https://www.instagram.com/balkanbackerei.badneuenahr/",
+    tiktok: "https://www.tiktok.com/@balkan_baeckerei",
+  },
 };
 
 /** Adresse für die Anzeige (HTML) */

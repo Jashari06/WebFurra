@@ -50,6 +50,9 @@ function businessJson() {
     hasMenu: `${SITE}/#speisekarte`,
     acceptsReservations: false,
   };
+  // Social-Media-Profile, sobald sie in CONFIG.social eingetragen sind
+  const sameAs = Object.values(CONFIG.social || {}).filter(Boolean);
+  if (sameAs.length) biz.sameAs = sameAs;
   // Öffnungszeiten nur, wenn sie bestätigt sind – keine falschen Zeiten an Google weitergeben
   if (CONFIG.hoursConfirmed) {
     biz.openingHoursSpecification = Object.entries(CONFIG.hours)
