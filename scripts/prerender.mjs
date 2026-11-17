@@ -4,6 +4,7 @@
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { execSync } from 'node:child_process';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const dist = resolve(root, 'dist');
@@ -162,7 +163,12 @@ Sitemap: ${SITE}/sitemap.xml
 `, 'utf8');
 
 /* ---------- sitemap.xml ---------- */
-const today = new Date().toISOString().slice(0, 10);
+// lastmod = Datum des letzten Commits (echte Änderung), nicht das Build-Datum
+let today;
+try {
+  today = execSync('git log -1 --format=%cs', { cwd: root, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim();
+} catch { /* kein git verfügbar */ }
+if (!/^\d{4}-\d{2}-\d{2}$/.test(today || '')) today = new Date().toISOString().slice(0, 10);
 const links = LANGS.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${urlFor(l)}"/>`).join('\n')
   + `\n    <xhtml:link rel="alternate" hreflang="x-default" href="${urlFor('de')}"/>`;
 writeFileSync(resolve(dist, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
@@ -177,7 +183,7 @@ ${links}
 
 /* ---------- llms.txt (kurze Übersicht für KI-Assistenten, siehe llmstxt.org) ---------- */
 const dishes = ['burek', 'sirnica', 'zeljanica', 'krompirusa', 'lepinja', 'pogaca', 'cevapi', 'pljeskavica', 'filled',
-  'sudzuk', 'chicken', 'platter', 'baklava', 'tulumbe', 'kadaif', 'tufahija', 'coffee', 'yogurt', 'tea', 'soft'];
+  'sudzuk', 'chicken', 'platter', 'baklava', 'tulumbe', 'kadaif', 'coffee', 'yogurt', 'tea', 'soft'];
 const where = [CONFIG.street, `${CONFIG.postalCode} ${CONFIG.city}`, 'Germany'].filter(Boolean).join(', ');
 const hoursLines = CONFIG.hoursConfirmed
   ? Object.entries(CONFIG.hours).sort(([a], [b]) => ((+a + 6) % 7) - ((+b + 6) % 7))

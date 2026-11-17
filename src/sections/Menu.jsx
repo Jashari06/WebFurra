@@ -14,7 +14,7 @@ export const PANELS = [
   { id: 'grill', tab: 'tab.grill', img: '1777199160034-565d154d41e9', alt: 'alt.cevapi',
     dishes: ['cevapi', 'pljeskavica', 'filled', 'sudzuk', 'chicken', 'platter'].map((k) => ({ k })) },
   { id: 'suess', tab: 'tab.sweet', img: '1761828122856-8703baac8e86', alt: 'alt.baklava',
-    dishes: ['baklava', 'tulumbe', 'kadaif', 'tufahija'].map((k) => ({ k })) },
+    dishes: ['baklava', 'tulumbe', 'kadaif'].map((k) => ({ k })) },
   { id: 'trinken', tab: 'tab.drinks', img: 'assets/img/caffe.webp', alt: 'alt.coffee', // eigenes Foto
     dishes: ['coffee', 'yogurt', 'tea', 'soft'].map((k) => ({ k })) },
 ];
@@ -89,20 +89,35 @@ export default function Menu({ activeTab, setActiveTab }) {
           ))}
         </div>
 
-        <div className="panel" role="tabpanel" id={`panel-${panel.id}`} aria-labelledby={`tab-${panel.id}`} ref={panelRef} key={panel.id}>
-          <figure className="panel__img"><img loading="lazy" src={panel.img.startsWith('assets/') ? asset(panel.img) : IMG(panel.img)} alt={t(panel.alt)} /></figure>
-          <ul className="dishes">
-            {panel.dishes.map(({ k, price }) => (
-              <li className="dish" key={k}>
-                <div className="dish__top">
-                  <Html as="h3" k={`d.${k}`} />
-                  {price && <span className="dish__price">{price}</span>}
-                </div>
-                <p>{t(`d.${k}.p`)}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Alle Kategorien stehen im HTML (Suchmaschinen lesen so die ganze Karte);
+            nicht gewählte sind mit `hidden` ausgeblendet. */}
+        {PANELS.map((p) => {
+          const active = p.id === panel.id;
+          return (
+            <div
+              className="panel"
+              role="tabpanel"
+              id={`panel-${p.id}`}
+              aria-labelledby={`tab-${p.id}`}
+              ref={active ? panelRef : undefined}
+              hidden={!active}
+              key={p.id}
+            >
+              <figure className="panel__img"><img loading="lazy" src={p.img.startsWith('assets/') ? asset(p.img) : IMG(p.img)} alt={t(p.alt)} /></figure>
+              <ul className="dishes">
+                {p.dishes.map(({ k, price }) => (
+                  <li className="dish" key={k}>
+                    <div className="dish__top">
+                      <Html as="h3" k={`d.${k}`} />
+                      {price && <span className="dish__price">{price}</span>}
+                    </div>
+                    <p>{t(`d.${k}.p`)}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
